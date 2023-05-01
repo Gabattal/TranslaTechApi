@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.ts",
+      "src": "src/index.ts",
       "use": "@vercel/node",
       "config": {
-        "buildCommand": "npm run build",
-        "outputDirectory": "dist"
+        "NODE_OPTIONS": "--require tsconfig-paths/register"
       }
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
+    { "src": "/.*", "dest": "src/index.ts" }
   ]
 }

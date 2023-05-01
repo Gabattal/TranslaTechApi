@@ -1,7 +1,7 @@
 import {Type} from "@fastify/type-provider-typebox";
-import {flattenDocument, unFlattenDocument} from "services/translate/lib/encoder";
-import {translateDocument} from "services/translate/lib/translate";
-import {TServer} from "@/index";
+import {TServer} from "@";
+import {flattenDocument, unFlattenDocument} from "@/services/translate/lib/encoder";
+import {translateDocument} from "@/services/translate/lib/translate";
 
 
 const schema = {

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node index.ts",
-    "dev": "nodemon -r tsconfig-paths/register -T ./index.ts",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev": "nodemon -r tsconfig-paths/register -T src/index.ts",
     "lint": "eslint **/*.ts",
     "dev:test": "vitest --ui"
   },
@@ -25,8 +25,11 @@
     "@fastify/multipart": "^7.6.0",
     "@fastify/type-provider-typebox": "^3.1.0",
     "deepl-node": "^1.9.0",
+    "express": "^4.18.2",
     "fastify": "^4.15.0",
-    "fastify-cors": "^6.1.0"
+    "fastify-cors": "^6.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@types/node": "^18.15.13",
