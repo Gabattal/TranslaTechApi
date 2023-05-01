@@ -19,6 +19,7 @@ async function initServer(server: TServer) {
     });
 
     server.post('/upload', async (request: FastifyRequest, reply: FastifyReply) => {
+        // @ts-ignore
         const {fileInput} = request.body;
         const content = JSON.parse(fileInput[0].data.toString());
         return content;
