@@ -9,13 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.ts"
     }
-  ],
-  "functions": {
-    "services/**/*": {
-      "memory": 512,
-      "runtime": "@vercel/node.18"
-    }
-  }
+  ]
 }
