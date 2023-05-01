@@ -2,9 +2,12 @@
   "name": "@translatech/backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register -T ./index.ts",
+    "start": "node index.ts",
     "dev": "nodemon -r tsconfig-paths/register -T ./index.ts",
     "lint": "eslint **/*.ts",
     "dev:test": "vitest --ui"
