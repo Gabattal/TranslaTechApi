@@ -1,5 +1,5 @@
 import fastify, {FastifyRequest, FastifyReply} from 'fastify';
-import createTranslateHandler from 'services/translate/handlers/translateDocument'
+import createTranslateHandler from '@/services/translate/handlers/translateDocument'
 import cors from '@fastify/cors';
 import fastifyMultipart from '@fastify/multipart';
 import {TypeBoxTypeProvider} from "@fastify/type-provider-typebox";
