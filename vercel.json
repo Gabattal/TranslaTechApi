@@ -5,11 +5,19 @@
       "src": "src/index.ts",
       "use": "@vercel/node",
       "config": {
-        "NODE_OPTIONS": "--require tsconfig-paths/register"
+        "build": {
+          "env": {
+            "TS_NODE_PROJECT": "tsconfig.json"
+          },
+          "command": "tsc && ts-node --transpile-only ./src/index.ts"
+        }
       }
     }
   ],
   "routes": [
-    { "src": "/.*", "dest": "src/index.ts" }
+    {
+      "src": "/.*",
+      "dest": "/src/index.ts"
+    }
   ]
 }
