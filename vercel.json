@@ -12,5 +12,10 @@
       "dest": "/"
     }
   ],
-  "includeFiles": ["services/**"]
+  "functions": {
+    "services/**/*": {
+      "memory": 512,
+      "runtime": "@vercel/node.18"
+    }
+  }
 }
